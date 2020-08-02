@@ -168,6 +168,7 @@ class GitAuthHelper {
   }
 
   async removeAuth(): Promise<void> {
+    core.debug(`Unsetting auth`)
     await this.removeSsh()
     await this.removeToken()
   }
